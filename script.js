@@ -1,49 +1,25 @@
-const products = [
-    {name: "Ноутбук", price: 75000, category: "Техника"},
-    {name: "Мышь", price: 1500, category: "Аксессуары"},
-    {name: "Клавиатура", price: 3500, category: "Аксессуары"},
-    {name: "Монитор", price: 22000, category: "Техника"},
-    {name: "Наушники", price: 5000, category: "Аксессуары"},
-]
+/*
+// ПЕРВОЕ ЗАДАНИЕ
 
-console.log("-----ПЕРВОЕ ЗАДАНИЕ-----");
-products.forEach(function(product) {
-    console.log(`Название продукта - ${product[`name`]}, его стоимость - ${product[`price`]}`);
-});
+console.log(window); // [object Window]
+console.log(document); // {"location":{"ancestorOrigins":{"0":"https://coddy.tech"},"href":"about:srcdoc","origin":"null","protocol":"about:","host":"","hostname":"","port":"","pathname":"srcdoc","search":"","hash":""}}
+console.log(navigator); // {}
+console.log(location.href); // about:srcdoc
+alert('Добро пожаловать'); // Всплывающее окно на всей странице с тектом добро пожаловать
 
-console.log("-----ВТОРОЕ ЗАДАНИЕ-----");
-products.filter(function(product) {
-    if (product[`price`] < 5000) {
-        console.log(`Товар дешевле 5000 рублей - ${product['name']}, его цена - ${product[`price`]}`);
-    }
-});
+let name = prompt('Как тебя зовут?') 
+console.log("Привет, " + name); // Привет, (введенное имя в всплывающем окне)
+*/
 
-console.log("-----ТРЕТЬЕ ЗАДАНИЕ-----");
-const newProducts = products.map(function(product) {
-    return product.name;
-});
+// ТРЕТЬЕ ЗАДАНИЕ
 
-console.log(newProducts);
+let main_title = document.getElementById('main-title');
+let description = document.getElementsByClassName('description');
+let container = document.getElementById('container');
 
-console.log("-----ЧЕТВЕРТОЕ ЗАДАНИЕ-----");
-const firstCategory = products.find(function(product) {
-    if (product[`category`] === "Техника") {
-        return product;
-    }
-});
+console.log(`Заголовок - ${main_title.textContent}, Доп.Информация - ${container.textContent.trim()}`);
 
-console.log(firstCategory);
+for (let p of description) {
+    console.log(p.textContent);
+}
 
-console.log("-----ПЯТОЕ ЗАДАНИЕ-----");
-const discountProducts = products.map(function(product) {
-    const discount = 10;
-    const procentDiscount = discount/100;
-
-    const discountPrice = product[`price`] * procentDiscount;
-    const TotalPrice = product[`price`] - discountPrice;
-    
-    product[`price`] = TotalPrice
-    return product;
-});
-
-console.log(discountProducts);
