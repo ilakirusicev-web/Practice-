@@ -56,3 +56,10 @@ console.log(link.hasAttribute('title'));
 */
 
 // Третье задание - 2 практика
+let username = document.querySelector('#username');
+let result = document.querySelector('#result');
+
+username.setAttribute('value', 'Преподователь')
+console.log(username.getAttribute('value'));
+
+result.textContent = username.value;
