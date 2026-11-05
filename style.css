@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+#heading {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#description {
+    color: black;
+    font-size: 35px;
+}

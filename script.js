@@ -1,8 +1,8 @@
-let title = document.querySelector("#title");
+let heading = document.querySelector("#heading");
 let description = document.querySelector('#description');
 let change = document.querySelector('#change');
 
 change.addEventListener("click", function() {
-    title.textContent = "Добро пожаловать!";
-    description.textContent = "Мы изучаем JavaScript и DOM";
+    description.style.color = "white";
+    heading.style.backgroundColor = "black";
 });
