@@ -1,12 +1,7 @@
-let skills = document.querySelector("#skills");
+let paragrath = document.querySelector("#paragrath");
+let deletebutton = document.querySelector("#deletebutton");
 
-let item1 = document.createElement("li");
-item1.textContent = "HTML";
-
-let item2 = document.createElement("li");
-item2.textContent = "CSS";
-
-let item3 = document.createElement("li");
-item3.textContent = "JS";
-
-skills.append(item1, item2, item3);
+deletebutton.addEventListener("click", function() {
+    paragrath.remove();
+    deletebutton.textContent = "Успешно удален";
+});
