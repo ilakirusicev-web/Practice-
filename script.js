@@ -1,8 +1,12 @@
-let heading = document.querySelector("#heading");
-let description = document.querySelector('#description');
-let change = document.querySelector('#change');
+let skills = document.querySelector("#skills");
 
-change.addEventListener("click", function() {
-    description.style.color = "white";
-    heading.style.backgroundColor = "black";
-});
+let item1 = document.createElement("li");
+item1.textContent = "HTML";
+
+let item2 = document.createElement("li");
+item2.textContent = "CSS";
+
+let item3 = document.createElement("li");
+item3.textContent = "JS";
+
+skills.append(item1, item2, item3);
